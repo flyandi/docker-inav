@@ -10,11 +10,17 @@ This docker image is intended to provide a full build environment for [iNav Flig
 
 The image contains the latest arm build toolchain.
 
-Local Example
+Get Started
+-------------
+```shell
+docker pull flyandi/docker-inav
+```
+
+Local Build Example
 -------------
 
 ```shell
-docker pull flyandi/inav
+docker pull flyandi/docker-inav
 git clone https://github.com/iNavFlight/inav
 cd inav/
 docker run --rm -v `pwd`:/home/src/ flyandi/inav make TARGET=OMNIBUSF4V3
@@ -31,7 +37,7 @@ stages:
 
 build:
   stage: build
-  image: flyandi/inav
+  image: flyandi/docker-inav
   script:
     - git clone https://github.com/iNavFlight/inav
     - cd inav/
