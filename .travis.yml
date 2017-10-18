@@ -6,10 +6,6 @@ install:
 
 script:
   - docker build -t latest .
-  - docker run -it -d latest node
-  - docker run -it -d latest aws
-  - docker run -it -d latest zip
-  - docker run -it -d latest docker
 
 after_script:
   - docker images
