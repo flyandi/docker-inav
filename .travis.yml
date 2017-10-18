@@ -1,0 +1,15 @@
+language: bash
+services: docker
+
+install:
+  - git clone https://github.com/docker-library/official-images.git ~/official-images
+
+script:
+  - docker build -t latest .
+  - docker run -it -d latest node
+  - docker run -it -d latest aws
+  - docker run -it -d latest zip
+  - docker run -it -d latest docker
+
+after_script:
+  - docker images
