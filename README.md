@@ -23,7 +23,7 @@ Local Build Example
 docker pull flyandi/docker-inav
 git clone https://github.com/iNavFlight/inav
 cd inav/
-docker run --rm -v `pwd`:/home/src/ flyandi/inav make TARGET=OMNIBUSF4V3
+docker run --rm -v `pwd`:/home/src/ flyandi/docker-inav make TARGET=OMNIBUSF4V3
 ```
 
 GitLab CI Build Example
